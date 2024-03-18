@@ -1,10 +1,10 @@
-import Navbar from "./Components/Navbar"
 import Homepage from "./Pages/Homepage"
+import Shoppage from "./Pages/Shoppage"
 
 const App = () => {
   return (
     <div>
-      <Homepage />
+      <Shoppage />
     </div>
   )
 }

@@ -126,3 +126,34 @@ a{
         
     }
 }
+
+
+// Image and Current Path File
+.ImageAndCurrentPath{
+    background-image: url("../assets/images/Image&CP.png");
+    width: 100%;
+    height: 28rem;
+    background-size: cover;
+    background-position: center;
+    @include flex(row, center, center, 0rem);
+
+    div{
+        @include flex(column, center, center, 0rem);
+
+        h1{
+            @extend %poppins-medium;
+            font-size: 3.3rem;
+            margin: 0
+        }
+
+        h2{
+            @extend %poppins-medium;
+            margin: 0;
+            font-size: 1.2rem;
+            span{
+                @extend %poppins-light;
+                margin: 0;
+            }
+        }
+    }
+}
