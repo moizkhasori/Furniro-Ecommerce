@@ -13,6 +13,14 @@
         @extend %poppins-regular;
         @include flex(row, space-between, center);
 
+        @include responsiveMaxWidth(800px){
+            @include flex(column, center, center);
+        }
+
+        @include responsiveMaxWidth(500px){
+            @include flex(column, center, flex-start);
+        }
+
         .leftSide{
             @include flex(row, center, center);
 
@@ -31,6 +39,9 @@
 
         .rightSide{
             @include flex(row, center, center, 4rem);
+            @include responsiveMaxWidth(500px){
+                @include flex(column, center, flex-start);
+            }
             font-size: 1.1rem;
             .showdiv{
                 @include flex(row, center, center, 1rem);
@@ -53,6 +64,24 @@
                     height: 3rem;
                 }
             }
+        }
+    }
+    
+}
+
+
+.cardsDisplay{
+    
+    .wrapperdiv{
+        margin: 0 auto;
+        width: 80%;
+        @include flex(column, center, center, 2rem);
+        padding: 3rem 0;
+
+        .cardsSection{
+            @include flex(row, center, center, 2rem);
+            flex-wrap: wrap;
+            padding: 2rem 0;
         }
     }
     

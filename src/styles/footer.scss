@@ -47,6 +47,9 @@
                         color: $gray;
                         @extend %poppins-regular;
                         margin: 0;
+                        @include responsiveMaxWidth(700px){
+                            text-align: center
+                        }
     
                     }
                 }
