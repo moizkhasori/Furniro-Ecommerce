@@ -1,0 +1,19 @@
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $gap: 1rem) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+  }
+
+  @mixin responsiveMaxWidth($breakpoint) {
+    @media only screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+
+  @mixin responsiveMinWidth($breakpoint) {
+    @media only screen and (min-width: $breakpoint) {
+      @content;
+    }
+  }

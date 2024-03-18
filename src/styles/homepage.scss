@@ -1,0 +1,286 @@
+@import "./partials";
+@import "./mixins";
+
+.homepage-section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../assets/images/homepageMainImage.jpg");
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    object-position: center;
+
+    .homepage-info-container{
+        background-color: #FFF3E3;
+        position: absolute;
+        z-index: 1;
+        border-radius: 0.5rem;
+
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        @include responsiveMaxWidth(768px){
+            @include flex(column, flex-start, flex-start, 1.5rem);
+            padding: 1rem;
+            padding-right: 2rem;
+            width: 80%;
+            left: 5%;
+            right: 5%;
+        }
+        @include responsiveMinWidth(768px){
+            @include flex(column, flex-start, flex-start, 3rem);
+            right: calc(100% - 90%);
+            bottom: calc(100% - 65%);
+            padding: 4rem;
+        }
+
+        >div{     
+            @include flex(column, flex-start, flex-start, 0.7rem);
+            
+            >h3{
+                @extend %poppins-semibold;                
+                margin: 0;
+                @include responsiveMinWidth(768px){
+                    font-size: 1.1rem;
+                }
+    
+            }
+            >h1{
+                @extend %poppins-bold;
+                margin: 0;
+                color: $golden;
+                @include responsiveMinWidth(768px){
+                    font-size: 1.1rem;
+                    font-size: 2.7rem;
+                    width: 250px;
+                    line-height: 3.5rem;
+                }
+                
+            }
+            >p{
+                @extend %poppins-medium;
+                margin: 0;
+                @include responsiveMinWidth(768px){
+                    font-size: 1rem;
+                    width: 400px;
+                }
+            }
+        }
+        button{
+            @extend %poppins-bold;
+            
+            background-color:$golden;
+            color: $white;
+            outline: none;
+            border: none;
+            padding: 1rem;
+            
+            @include responsiveMinWidth(768px){
+                font-size: 1.1rem;
+                padding: 1.7rem 5rem;
+            }
+        }
+
+        
+    }
+
+    .homepage-image{
+        width: 100vw;
+        height: 100vh;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+
+// ----------------------------------------------------------
+// Section 2
+// ----------------------------------------------------------
+
+
+.section-two{
+    padding: 4rem 0;
+    .wrapper-div{
+        width: 90%;
+        margin: 0.5rem auto;
+        @include flex(column, center, center, 3rem);
+
+        .top-text{
+            @include flex(column, center, center,0rem);
+            h1{
+                @extend %poppins-bold;
+                margin: 0;
+                font-size: 2.5rem;
+            }
+            p{
+                @extend %poppins-regular;
+                margin: 0;
+                font-size: 1.1rem;
+                color: $gray;
+            }
+        }
+
+        .bottom-images{
+            @include flex(row, space-around, center, 2rem);
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.section-three{
+    padding: 2rem 0;
+    .wrapper-div{
+        width: 90%;
+        margin: 0.5rem auto;
+        @include flex(column, center, center, 2rem);
+
+        .top-text{
+            @include flex(column, center, center,0rem);
+            h1{
+                @extend %poppins-bold;
+                margin: 0;
+                font-size: 2.5rem;
+            }
+            p{
+                @extend %poppins-regular;
+                margin: 0;
+                color: $gray;
+            }
+        }
+
+        .bottom-part{
+            
+            @include flex(column, center, center, 5rem);
+            .bottom-images{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr); // 4 columns with equal width
+                grid-auto-rows: auto; // Automatically adjust row height based on content
+                gap: 2rem; // Optional gap between grid items
+    
+                @include responsiveMaxWidth(1280px){
+                    grid-template-columns: repeat(3,1fr);
+                }
+    
+                @include responsiveMaxWidth(980px){
+                    grid-template-columns: repeat(2,1fr);
+                }
+                @include responsiveMaxWidth(768px){
+                    grid-template-columns: repeat(1,1fr);
+                }
+                .grid-item {
+                    background-color: #ccc;
+                    padding: 20px;
+                    text-align: center;
+                    border: 1px solid red;
+                  }
+            }
+
+            button{
+                outline: none;
+                border: 1px solid #B88E2F;
+                @extend %poppins-medium;
+                padding: 1rem 3rem;
+                background-color: transparent;
+                color: $golden;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+
+.section-four{
+    background-color: $lightgolden;
+    padding: 2rem 0;
+    overflow: hidden;
+    margin-top: 2rem;
+
+    .wrapper-div{
+        width: 80%;
+        margin: 0.5rem auto;
+        @include flex(row,flex-start,center,);
+
+        .left-box{
+            width: 40%;
+            @include flex(column,flex-start,flex-start,1.3rem);
+            h1{
+                @extend %poppins-bold;
+                font-size: 3rem;
+                margin: 0;
+                line-height: 3.5rem;
+            }
+            p{
+                @extend %poppins-medium;
+                color: $gray;
+                margin: 0;
+                width: 80%;
+
+            }
+            button{
+                @extend %poppins-medium;
+                background-color: $golden;
+                color: $white;
+                border: none;
+                padding: 1rem 3rem;
+                margin: 0;
+            }
+        }
+
+        .right-box{
+            width: 70%;
+            @include flex(row,flex-start,flex-start,1rem);
+
+            div{
+                position: relative;
+                .image-details{
+                    position: absolute;
+                    
+                    bottom: 2rem;
+                    left: 2rem;
+                    
+                    @include flex(row, flex-start, flex-end, 0);
+                    .image-card{
+                        padding: 3rem 2rem;
+                        background-color: rgba(255, 255, 255, 0.514);
+                        h1{
+                            @extend %poppins-medium;
+                            margin: 0;
+                            font-size: 1rem;
+                            color: $gray;
+                        }
+                        h2{
+                            @extend %poppins-semibold;
+                            font-size: 2rem;
+                            margin: 0;
+                        }
+                    }
+
+                    .arrow{
+                        @include flex(row,center, center, 0);
+                        margin: 0;
+                        width: 4rem;
+                        height: 4rem;
+                        background-color: $golden;
+                    }
+                    
+                }
+            }
+
+            
+        }
+    }
+}
+
+
+.section-five{
+    margin: 4rem 0;
+    overflow: hidden;
+    img{
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}

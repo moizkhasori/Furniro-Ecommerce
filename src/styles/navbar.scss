@@ -1,0 +1,43 @@
+@import "mixins";
+@import "partials";
+
+.wrapperDiv{
+    width: 90%;
+    margin: 0.5rem auto;
+    @include flex(row, space-between, center);
+
+    .logoLeft{
+        @include flex(row, center, center);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+
+    .middleLinks{
+        @include flex(row, center, center, 3rem);
+        @extend %poppins-medium;
+
+        @include responsiveMaxWidth(768px){
+            display: none;
+        }
+    
+    }
+
+    .rightIcons{
+        @include flex(row, center, center, 3rem);
+
+        .searchDiv{
+            @include responsiveMaxWidth(768px){
+                display: none;
+            }
+        }
+
+        .userDiv{
+            @include responsiveMaxWidth(768px){
+                display: none;
+            }
+        }
+    
+    }
+
+}
