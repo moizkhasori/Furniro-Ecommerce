@@ -1,0 +1,59 @@
+@import "./partials";
+@import "./mixins";
+
+.FilterBarShop{
+
+    background-color: $lightgolden;
+    width: 100%;
+
+    .wrapperdiv{
+        margin: 0 auto;
+        width: 80%;
+        padding: 1.2rem 0;
+        @extend %poppins-regular;
+        @include flex(row, space-between, center);
+
+        .leftSide{
+            @include flex(row, center, center);
+
+            .filterdiv{
+                @include flex(row, center, center);
+                font-size: 1.4rem;
+                margin: 0;
+            }
+
+            .linediv{
+                height: 2rem;
+                border-right: 2px solid $gray;
+            }
+
+        }
+
+        .rightSide{
+            @include flex(row, center, center, 4rem);
+            font-size: 1.1rem;
+            .showdiv{
+                @include flex(row, center, center, 1rem);
+                div{
+                    @include flex(row, center, center);
+                    color: $gray;
+                    background-color: $white;
+                    height: 3rem;
+                    padding: 0 1rem;
+                }
+            }
+
+            .sortbydiv{
+                @include flex(row, space-between, center, 1rem);
+                div{
+                    @include flex(row, center, center);
+                    color: $gray;
+                    background-color: $white;
+                    padding: 0 2rem;
+                    height: 3rem;
+                }
+            }
+        }
+    }
+    
+}

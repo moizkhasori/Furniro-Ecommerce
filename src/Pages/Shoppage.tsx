@@ -1,3 +1,4 @@
+import FilterBarShop from "../Components/FilterBarShop"
 import ImageAndCurrentPath from "../Components/ImageAndCurrentPath"
 import Navbar from "../Components/Navbar"
 
@@ -6,6 +7,7 @@ const Shoppage = () => {
     <>
         <Navbar />
         <ImageAndCurrentPath />
+        <FilterBarShop />
 
     </>
   )
